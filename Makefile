@@ -7,7 +7,7 @@ default: loader
 	bash -c "cd ../rootfs; sync"
 
 module:
-	$(MAKE) -C ftrace/
+	$(MAKE) -C kernel_module/
 
 loader: module
 	$(MAKE) -C loader/
@@ -16,7 +16,7 @@ clean_loader:
 	$(MAKE) -C loader/ clean
 
 clean_module:
-	$(MAKE) -C ftrace/ clean
+	$(MAKE) -C kernel_module/ clean
 
 clean: clean_loader clean_module
 	

@@ -1,4 +1,4 @@
-obj-m := ftrace.o
+obj-m := standalone_ftrace.o
 KDIR := /home/gilad/excer/ftrace/linux-5.2.9
 PWD := $(shell pwd)
 CC := $(CROSS_COMPILE)gcc

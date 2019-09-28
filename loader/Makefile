@@ -6,7 +6,7 @@ default: make_raw_ko
 	$(CC) -I $(FTRACE_INCLUDE_PATH) -static $(BUILD_DIR)/out_binary loader.c -o $(BUILD_DIR)/loader
 
 make_raw_ko:
-	cd $(BUILD_DIR) && $(OBJCOPY) -I binary -O elf32-tradbigmips -B mips ftrace.ko out_binary
+	cd $(BUILD_DIR) && $(OBJCOPY) -I binary -O elf32-tradbigmips -B mips standalone_ftrace.ko out_binary
 	
 	cd $(PWD)
 
